@@ -37,7 +37,7 @@ if(isset($_SESSION["LastName"])){
 					</div>
 				</form>
 			</div>
-			<div class="col-md-1 bg-primary">
+			<div class="col-md-1 lower">
 				<?php if(isset($lastName)): ?>
 					<a href="profile.php" class="btn btn-primary"><?= $lastName?></a>
 				<?php else: ?>
@@ -45,7 +45,7 @@ if(isset($_SESSION["LastName"])){
 					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupForm">Sign Up</button>
 				<?php endif; ?>
 			</div>
-			<div class="col-md-1 bg-danger">
+			<div class="col-md-1 lower">
 				<?php if(isset($lastName)): ?>
 					<a href="logout.php" class="btn btn-primary">Log Out</a>
 				<?php else: ?>
