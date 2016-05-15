@@ -48,39 +48,45 @@
 				</div>
 				<div class="modal-body">
 					<form class="form-horizontal">
-						<div class="form-group"></div>
-						<label class="col-md-4 col-md-offset-1">First Name:</label>
-						<div class="col-md-5">
-							<input type="text" class="form-control input-sm">
+						<div class="form-group">
+							<label class="col-md-4 col-md-offset-1">First Name:</label>
+							<div class="col-md-5">
+								<input type="text" class="form-control input-sm">
+							</div>
 						</div>
 
-						<div class="form-group"></div>
-						<label class="col-md-4 col-md-offset-1">Last Name:</label>
-						<div class="col-md-5">
-							<input type="text" class="form-control input-sm">
+						<div class="form-group">
+							<label class="col-md-4 col-md-offset-1">Last Name:</label>
+							<div class="col-md-5">
+								<input type="text" class="form-control input-sm">
+							</div>
 						</div>
 
-						<div class="form-group"></div>
-						<label class="col-md-4 col-md-offset-1">Email:</label>
-						<div class="col-md-5">
-							<input type="email" class="form-control input-sm">
+						<div class="form-group">
+							<label class="col-md-4 col-md-offset-1">Email:</label>
+							<div class="col-md-5">
+								<input type="email" class="form-control input-sm">
+							</div>
 						</div>
 
-						<div class="form-group"></div>
-						<label class="col-md-4 col-md-offset-1">Password:</label>
-						<div class="col-md-5">
-							<input type="password" class="form-control input-sm">
+						<div class="form-group">
+							<label class="col-md-4 col-md-offset-1">Password:</label>
+							<div class="col-md-5">
+								<input type="password" class="form-control input-sm">
+							</div>
 						</div>
 
-						<div class="form-group"></div>
-						<label class="col-md-4 col-md-offset-1">Confirm Password:</label>
-						<div class="col-md-5">
-							<input type="password" class="form-control input-sm">
+						<div class="form-group">
+							<label class="col-md-4 col-md-offset-1">Confirm Password:</label>
+							<div class="col-md-5">
+								<input type="password" class="form-control input-sm">
+							</div>
 						</div>
 
-						<div class="form-group"></div>
-						<div class="col-md-2 col-md-offset-8">
-							<input type="submit" class="btn btn-success" value="submit">
+						<div class="form-group">
+							<div class="col-md-2 col-md-offset-8">
+								<input type="submit" class="btn btn-success" value="submit">
+							</div>
 						</div>
 					</form>
 				</div>
