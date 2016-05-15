@@ -14,13 +14,16 @@ if(isset($_SESSION["LastName"])){
 	<title></title>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="index.css">
 </head>
 <body>	
 	<div class="container">
-		<div class="row">
-
-			<div class="col-md-2 bg-primary">logo</div>		
-			<div class="col-md-8 bg-danger">
+		<div class="row bg-primary">
+			<div class="col-md-2 logo">
+			<h1> Cat-Store</h1>
+			
+			</div>		
+			<div class="col-md-8 lower bg">
 				<form action="#" method="get" accept-charset="utf-8">
 					<div id="custom-search-input">
 						<div class="input-group col-md-12">
@@ -54,16 +57,16 @@ if(isset($_SESSION["LastName"])){
 		<div class="row">
 			<div class="col-md-2 bg-danger">
 				<div>
-					<label>menu</label>
+					<h1 class="text-center">menu</h1>
 				</div>
-				<div><a href="" title=""><button type="button" class="btn-primary">อาหารแมว</button></a></div>
-				<div><a href="" title=""><button type="button" class="btn-primary">อาหารแมว</button></a></div>
-				<div><a href="" title=""><button type="button" class="btn-primary">อาหารแมว</button></a></div>
-				<div><a href="" title=""><button type="button" class="btn-primary">อาหารแมว</button></a></div>
-				<div><a href="" title=""><button type="button" class="btn-primary">อาหารแมว</button></a></div>
-				<div><a href="" title=""><button type="button" class="btn-primary">อาหารแมว</button></a></div>
+				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">แมว</button></a></div>
+				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">อาหารแมว</button></a></div>
+				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">ของเล่นแมว</button></a></div>
+				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">ยารักษาโรค</button></a></div>
+				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">อาหารแมว</button></a></div>
+				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">อาหารแมว</button></a></div>
 			</div>
-			<div class="col-md-10 bg-primary">shop</div>	
+			<div class="col-md-10 bg-danger">shop</div>	
 		</div>	
 	</div>
 	<!-- Popup Sign Up Form -->
