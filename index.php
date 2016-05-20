@@ -20,8 +20,8 @@ if(isset($_SESSION["LastName"])){
 	<div class="container">
 		<div class="row bg-primary">
 			<div class="col-md-2 logo">
-			<h1> Cat-Store</h1>
-			
+				<h1> Cat-Store</h1>
+
 			</div>		
 			<div class="col-md-8 lower bg">
 				<form action="#" method="get" accept-charset="utf-8">
@@ -55,6 +55,8 @@ if(isset($_SESSION["LastName"])){
 			</div>		
 		</div>
 		<div class="row">
+
+			<!--menu-->
 			<div class="col-md-2 bg-danger">
 				<div>
 					<h1 class="text-center">menu</h1>
@@ -66,7 +68,49 @@ if(isset($_SESSION["LastName"])){
 				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">อาหารแมว</button></a></div>
 				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">อาหารแมว</button></a></div>
 			</div>
-			<div class="col-md-10 bg-danger">shop</div>	
+
+			<!--shop-->
+			<div class="col-md-10 bg-danger">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+						<img src="picture/catfood1.jpg" class="center-block">
+						</div>
+
+						<div class="item">
+							<img src="picture/catfood2.gif" class="center-block">
+						</div>
+
+						<div class="item">
+							<img src="picture/catbed.jpg" class="center-block">
+						</div>
+
+						
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+
+
+
+			</div>	
 		</div>	
 	</div>
 	<!-- Popup Sign Up Form -->
@@ -138,7 +182,7 @@ if(isset($_SESSION["LastName"])){
 				</div>
 				<div class="modal-body">
 					<form action="login.php" method="post" class="form-horizontal">
-						
+
 						<div class="form-group">
 							<label class="col-md-4 col-md-offset-1">Email:</label>
 							<div class="col-md-5">
