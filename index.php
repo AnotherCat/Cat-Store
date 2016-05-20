@@ -16,12 +16,33 @@ if(isset($_SESSION["LastName"])){
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="index.css">
 </head>
-<body>	
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Cat Store</a>
+			</div>
+			<ul class="nav navbar-nav">
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+			<div class="input-group">
+				<input type="text" class="form-control input-lg" placeholder="Search" />
+				<span class="input-group-btn">
+					<button class="btn btn-info btn-lg" type="button">
+						<i class="glyphicon glyphicon-search"></i>
+					</button>
+				</span>
+			</div>
+		</div>
+	</nav>
 	<div class="container">
 		<div class="row bg-primary">
 			<div class="col-md-2 logo">
-			<h1> Cat-Store</h1>
-			
+				<h1> Cat-Store</h1>
+
 			</div>		
 			<div class="col-md-8 lower bg">
 				<form action="#" method="get" accept-charset="utf-8">
@@ -138,7 +159,7 @@ if(isset($_SESSION["LastName"])){
 				</div>
 				<div class="modal-body">
 					<form action="login.php" method="post" class="form-horizontal">
-						
+
 						<div class="form-group">
 							<label class="col-md-4 col-md-offset-1">Email:</label>
 							<div class="col-md-5">
