@@ -58,7 +58,7 @@ if(isset($_SESSION["LastName"])){
 					</div>
 				</form>
 			</div>
-			<div class="col-md-1 bg-primary">
+			<div class="col-md-1 lower">
 				<?php if(isset($lastName)): ?>
 					<a href="profile.php" class="btn btn-primary"><?= $lastName?></a>
 				<?php else: ?>
@@ -66,7 +66,7 @@ if(isset($_SESSION["LastName"])){
 					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupForm">Sign Up</button>
 				<?php endif; ?>
 			</div>
-			<div class="col-md-1 bg-danger">
+			<div class="col-md-1 lower">
 				<?php if(isset($lastName)): ?>
 					<a href="logout.php" class="btn btn-primary">Log Out</a>
 				<?php else: ?>
@@ -76,6 +76,8 @@ if(isset($_SESSION["LastName"])){
 			</div>		
 		</div>
 		<div class="row">
+
+			<!--menu-->
 			<div class="col-md-2 bg-danger">
 				<div>
 					<h1 class="text-center">menu</h1>
@@ -87,7 +89,49 @@ if(isset($_SESSION["LastName"])){
 				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">อาหารแมว</button></a></div>
 				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">อาหารแมว</button></a></div>
 			</div>
-			<div class="col-md-10 bg-danger">shop</div>	
+
+			<!--shop-->
+			<div class="col-md-10 bg-danger">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+						<img src="picture/catfood1.jpg" class="center-block">
+						</div>
+
+						<div class="item">
+							<img src="picture/catfood2.gif" class="center-block">
+						</div>
+
+						<div class="item">
+							<img src="picture/catbed.jpg" class="center-block">
+						</div>
+
+						
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+
+
+
+			</div>	
 		</div>	
 	</div>
 	<!-- Popup Sign Up Form -->
