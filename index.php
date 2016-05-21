@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-if(isset($_SESSION["LastName"])){
-	$lastName = $_SESSION["LastName"];
+if(isset($_SESSION["profiles"])){
+	$lastName = $_SESSION["profiles"]["LastName"];
+	$id = $_SESSION["profiles"]["ID"];
 }
 ?>
 
@@ -25,8 +26,23 @@ if(isset($_SESSION["LastName"])){
 			<ul class="nav navbar-nav">
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				<li>
+					<?php if(isset($lastName)): ?>
+						<a href="profile.php?id=<?= $id ?>"><span class="glyphicon glyphicon-user"></span> <?= $lastName?></a>
+					<?php else: ?>
+						<!-- Sign Up button -->
+						<a href="#" data-toggle="modal" data-target="#signupForm"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+					<?php endif; ?>
+				</li>
+				<li>
+					<?php if(isset($lastName)): ?>
+						<a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
+					<?php else: ?>
+						<!-- Log In button -->
+						<a href="#" data-toggle="modal" data-target="#loginForm"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+					<?php endif; ?>
+				</li>
+				
 			</ul>
 			<div class="input-group col-md-6">
 				<input type="text" class="form-control input-lg" placeholder="Search" />
@@ -39,41 +55,8 @@ if(isset($_SESSION["LastName"])){
 		</div>
 	</nav>
 	<div class="container">
-		<div class="row bg-primary">
-			<div class="col-md-2 logo">
-				<h1> Cat-Store</h1>
-
-			</div>		
-			<div class="col-md-8 lower bg">
-				<form action="#" method="get" accept-charset="utf-8">
-					<div id="custom-search-input">
-						<div class="input-group col-md-12">
-							<input type="text" class="form-control input-lg" placeholder="Search" />
-							<span class="input-group-btn">
-								<button class="btn btn-info btn-lg" type="button">
-									<i class="glyphicon glyphicon-search"></i>
-								</button>
-							</span>
-						</div>
-					</div>
-				</form>
-			</div>
-			<div class="col-md-1 lower">
-				<?php if(isset($lastName)): ?>
-					<a href="profile.php" class="btn btn-primary"><?= $lastName?></a>
-				<?php else: ?>
-					<!-- Sign Up button -->
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupForm">Sign Up</button>
-				<?php endif; ?>
-			</div>
-			<div class="col-md-1 lower">
-				<?php if(isset($lastName)): ?>
-					<a href="logout.php" class="btn btn-primary">Log Out</a>
-				<?php else: ?>
-					<!-- Log In button -->
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginForm">Log In</button>
-				<?php endif; ?>
-			</div>		
+		<div class="row bg-primary">	
+			<div class="col-md-12 lower bg"></div>		
 		</div>
 		<div class="row">
 
@@ -104,7 +87,7 @@ if(isset($_SESSION["LastName"])){
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-						<img src="picture/catfood1.jpg" class="center-block">
+							<img src="picture/catfood1.jpg" class="center-block">
 						</div>
 
 						<div class="item">
@@ -141,39 +124,39 @@ if(isset($_SESSION["LastName"])){
 					<h4 class="modal-title">Sign Up</h4>
 				</div>
 				<div class="modal-body">
-					<form class="form-horizontal">
+					<form action="signup.php" method="post" class="form-horizontal">
 						<div class="form-group">
 							<label class="col-md-4 col-md-offset-1">First Name:</label>
 							<div class="col-md-5">
-								<input type="text" class="form-control input-sm">
+								<input type="text" class="form-control input-sm" name="FirstName">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 col-md-offset-1">Last Name:</label>
 							<div class="col-md-5">
-								<input type="text" class="form-control input-sm">
+								<input type="text" class="form-control input-sm" name="LastName">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 col-md-offset-1">Email:</label>
 							<div class="col-md-5">
-								<input type="email" class="form-control input-sm">
+								<input type="email" class="form-control input-sm" name="Email">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 col-md-offset-1">Password:</label>
 							<div class="col-md-5">
-								<input type="password" class="form-control input-sm">
+								<input type="password" class="form-control input-sm" name="Password">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 col-md-offset-1">Confirm Password:</label>
 							<div class="col-md-5">
-								<input type="password" class="form-control input-sm">
+								<input type="password" class="form-control input-sm" id="Confirm">
 							</div>
 						</div>
 

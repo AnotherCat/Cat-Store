@@ -10,7 +10,7 @@
     	if ($result->num_rows == 0)
       {
         echo "<span class='error'>Email/Password invalid</span><br><br>";
-        echo "<meta http-equiv=\"refresh\" content=\"2; URL=index.php\">";
+        echo "<meta http-equiv=\"refresh\" content=\"1; URL=index.php\">";
       }
       else
       {
@@ -18,9 +18,9 @@
 		  //as long as current session remains active, these session variables will be 
 		  //acccessible by all programs in the project
       	$row = $result->fetch_array(MYSQLI_ASSOC);
-        $_SESSION["LastName"] = $row["LastName"];
+        $_SESSION["profiles"] = $row;
         echo "Logging in...";
-        echo "<meta http-equiv=\"refresh\" content=\"2; URL=index.php\">";
+        echo "<meta http-equiv=\"refresh\" content=\"1; URL=index.php\">";
       }
 	}
 ?>
