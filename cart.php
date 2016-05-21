@@ -1,9 +1,20 @@
 <?php
 session_start();
-
-if(isset($_SESSION["profiles"]) && isset($_GET["id"])){
+require_once "functions.php";
+if(isset($_SESSION["profiles"])){
 	$lastName = $_SESSION["profiles"]["LastName"];
-	$id = $_GET["id"];
+	$memberID = $_SESSION["profiles"]["ID"];
+
+	$resultProducts = queryMySQL("SELECT * FROM products INNER JOIN cart ON cart.ProductCode = products.ProductCode WHERE cart.MemberID = '$memberID'");
+
+	if($resultProducts->num_rows == 0){
+		// do nothing
+	}else{
+		$products = array();
+		while($row=$resultProducts->fetch_array(MYSQLI_ASSOC)){
+			array_push($products,$row);
+		}
+	}
 }else{
 	echo "You dont have any permission here. HACKER!!!??";
 	destroySession();
@@ -66,30 +77,40 @@ if(isset($_SESSION["profiles"]) && isset($_GET["id"])){
 
 	<!-- start container -->
 	<div class="container">
-		
-		<div class="col-md-4 col-md-offset-4">
-			<form class="form-horizontal" role="form">
-				<div class="form-group">
-					<label class="control-label col-md-4">First Name:</label>
-					<div class="col-md-8">
-						<p class="form-control-static"><?= $_SESSION["profiles"]["FirstName"] ?></p>
+		<div class="row">
+			<div class="col-md-8 bg-danger">
+				<div class="container-fruid">
+					<!-- php here -->
+					<?php for($i=0;$i<count($products);$i++): ?>
+						<div class="row">
+							<div class="col-md-4">
+								Name : <?= $products[$i]["ProductName"] ?>
+							</div>
+							<div class="col-md-6">
+								Description : <?= $products[$i]["ProductDes"] ?>
+							</div>
+							<div class="col-md-2">
+								Price <?= $products[$i]["ProductPrice"] ?>
+							</div>
+						</div>
+					<?php endfor; ?>
+					<!-- end php here -->
+				</div>
+			</div>
+			<div class="col-md-4 bg-primary">
+				<div class="container-fruid">
+					<div class="row">
+						subtotal
+					</div>
+					<div class="row">
+						total
+					</div>
+					<div class="row">
+						<button class="btn" type="button">PROCEED TO CHECKOUT</button>
 					</div>
 				</div>
-				<div class="form-group">
-					<label class="control-label col-md-4">Last Name:</label>
-					<div class="col-md-8">
-						<p class="form-control-static"><?= $_SESSION["profiles"]["LastName"] ?></p>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-md-4">Email:</label>
-					<div class="col-md-8">
-						<p class="form-control-static"><?= $_SESSION["profiles"]["Email"] ?></p>
-					</div>
-				</div>
-			</form>
+			</div>
 		</div>
-		
 	</div>
 	<!-- end container -->
 

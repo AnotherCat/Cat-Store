@@ -6,6 +6,8 @@
   $appname = "Cat Store"; 	// name of your social networking site
 
   $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
+  $connection->query("set names utf8");
+
   if ($connection->connect_error) die($connection->connect_error);
 
   function createTable($name, $query) //check if table exist, if not, create new table

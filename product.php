@@ -1,9 +1,26 @@
 <?php
 session_start();
-
+require_once "functions.php";
 if(isset($_SESSION["profiles"])){
 	$lastName = $_SESSION["profiles"]["LastName"];
 	$id = $_SESSION["profiles"]["ID"];
+}
+
+if(isset($_GET["pcode"])){
+	$productCode = sanitizeString($_GET["pcode"]);
+
+	$result = queryMySQL("SELECT * FROM products WHERE ProductCode='$productCode'");
+
+	if($result->num_rows == 0){
+		// do nothing
+	}else{
+		$row=$result->fetch_array(MYSQLI_ASSOC);
+		$pID = $row["ID"];
+		$pCode = $row["ProductCode"];
+		$pName = $row["ProductName"];
+		$pDes = $row["ProductDes"];
+		$pPrice = $row["ProductPrice"];
+	}
 }
 ?>
 
@@ -11,6 +28,7 @@ if(isset($_SESSION["profiles"])){
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -21,7 +39,7 @@ if(isset($_SESSION["profiles"])){
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Cat Store</a>
+				<a class="navbar-brand" href="index.php">Cat Store</a>
 			</div>
 			<ul class="nav navbar-nav">
 			</ul>
@@ -57,69 +75,6 @@ if(isset($_SESSION["profiles"])){
 			</div>
 		</div>
 	</nav>
-	<div class="container">
-		<div class="row bg-primary">	
-			<div class="col-md-12 lower bg"></div>		
-		</div>
-		<div class="row">
-
-			<!--menu-->
-			<div class="col-md-2 bg-danger">
-				<div>
-					<h1 class="text-center">menu</h1>
-				</div>
-				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">แมว</button></a></div>
-				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">อาหารแมว</button></a></div>
-				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">ของเล่นแมว</button></a></div>
-				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">ยารักษาโรค</button></a></div>
-				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">อาหารแมว</button></a></div>
-				<div><a href="" title=""><button type="button" class="btn btn-primary btn-lg btn-block">อาหารแมว</button></a></div>
-			</div>
-
-			<!--shop-->
-			<div class="col-md-10 bg-danger">
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
-						
-					</ol>
-
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<img src="picture/catfood1.jpg" class="center-block">
-						</div>
-
-						<div class="item">
-							<img src="picture/catfood2.gif" class="center-block">
-						</div>
-
-						<div class="item">
-							<img src="picture/catbed.jpg" class="center-block">
-						</div>
-
-						
-					</div>
-
-					<!-- Left and right controls -->
-					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
-				</div>
-
-
-
-			</div>	
-		</div>	
-	</div>
 	<!-- Popup Sign Up Form -->
 	<div class="modal fade" id="signupForm">
 		<div class="modal-dialog">
@@ -216,6 +171,50 @@ if(isset($_SESSION["profiles"])){
 			<div class="modal-footer"></div>
 		</div>
 	</div>
+
+	<!-- start container -->
+	<div class="container">
+		
+		<div class="col-md-4 col-md-offset-4">
+			<?php if(isset($pCode)): ?>
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label class="control-label col-md-6">Product Code:</label>
+						<div class="col-md-6">
+							<p class="form-control-static"><?= $pCode.$pID ?></p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-6">Product Name:</label>
+						<div class="col-md-6">
+							<p class="form-control-static"><?= $pName ?></p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-6">Product Description:</label>
+						<div class="col-md-6">
+							<p class="form-control-static"><?= $pDes ?></p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-6">Product Price:</label>
+						<div class="col-md-6">
+							<p class="form-control-static"><?= $pPrice ?></p>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-4 col-md-offset-4">
+							<a href="#">Add to Cart</a>
+						</div>
+					</div>
+				</form>
+			<?php else: ?>
+				<span>Product not found XD</span>
+			<?php endif; ?>
+		</div>
+		
+	</div>
+	<!-- end container -->
 
 	<script src="jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
