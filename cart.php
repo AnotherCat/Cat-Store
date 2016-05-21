@@ -3,7 +3,7 @@ session_start();
 require_once "functions.php";
 if(isset($_SESSION["profiles"])){
 	$lastName = $_SESSION["profiles"]["LastName"];
-	$memberID = $_SESSION["profiles"]["ID"];
+	$memberID = $id = $_SESSION["profiles"]["ID"];
 
 	$resultProducts = queryMySQL("SELECT * FROM products INNER JOIN cart ON cart.ProductCode = products.ProductCode WHERE cart.MemberID = '$memberID'");
 
@@ -47,7 +47,7 @@ if(isset($_SESSION["profiles"])){
 				</li>
 				<li>
 					<?php if(isset($lastName)): ?>
-						<a href="#"><span class="glyphicon glyphicon-user"></span> <?= $lastName?></a>
+						<a href="profile.php?id=<?= $id ?>"><span class="glyphicon glyphicon-user"></span> <?= $lastName?></a>
 					<?php else: ?>
 						<!-- Sign Up button -->
 						<a href="#" data-toggle="modal" data-target="#signupForm"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
