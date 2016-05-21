@@ -130,35 +130,35 @@ if(isset($_SESSION["profiles"])){
 						<div class="form-group">
 							<label class="col-md-4 col-md-offset-1">First Name:</label>
 							<div class="col-md-5">
-								<input type="text" class="form-control input-sm">
+								<input type="text" class="form-control input-sm" name="FirstName">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 col-md-offset-1">Last Name:</label>
 							<div class="col-md-5">
-								<input type="text" class="form-control input-sm">
+								<input type="text" class="form-control input-sm" name="LastName">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 col-md-offset-1">Email:</label>
 							<div class="col-md-5">
-								<input type="email" class="form-control input-sm">
+								<input type="email" class="form-control input-sm" name="Email">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 col-md-offset-1">Password:</label>
 							<div class="col-md-5">
-								<input type="password" class="form-control input-sm">
+								<input type="password" class="form-control input-sm" name="Password">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 col-md-offset-1">Confirm Password:</label>
 							<div class="col-md-5">
-								<input type="password" class="form-control input-sm">
+								<input type="password" class="form-control input-sm" id="Confirm">
 							</div>
 						</div>
 
