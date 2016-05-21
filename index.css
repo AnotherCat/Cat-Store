@@ -1,11 +1,24 @@
-.lower{
-	padding-top: 100px;
-	padding-bottom: 10px;
-}
+
 .bg{
 	background-image: url("picture/1.png");
 	height: 150px;
+	background-repeat: no-repeat;
 }
 .logo{
 	padding-top: 50px;
+}
+.menu{
+	padding-top: 10px;
+}
+.highLight{
+	padding-top: 10px;
+    background-color: rgb(255,255,255);
+}
+.carousel-caption {
+	color: rgb(32,32,32);
+  	position: absolute;
+   	top:-40px;
+}
+.lo-pd{
+	padding-top: 60px;
 }
