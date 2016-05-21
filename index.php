@@ -28,7 +28,7 @@ if(isset($_SESSION["LastName"])){
 				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			</ul>
-			<div class="input-group">
+			<div class="input-group col-md-6">
 				<input type="text" class="form-control input-lg" placeholder="Search" />
 				<span class="input-group-btn">
 					<button class="btn btn-info btn-lg" type="button">
@@ -114,8 +114,6 @@ if(isset($_SESSION["LastName"])){
 						<div class="item">
 							<img src="picture/catbed.jpg" class="center-block">
 						</div>
-
-						
 					</div>
 
 					<!-- Left and right controls -->
