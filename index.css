@@ -4,6 +4,7 @@
 }
 .bg{
 	background-image: url("picture/1.png");
+	height: 150px;
 }
 .logo{
 	padding-top: 50px;
