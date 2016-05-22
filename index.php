@@ -30,10 +30,10 @@ if(isset($_SESSION["profiles"])){
 			<!--menu-->
 			<div class="col-md-2 menu bg-warning">
 				<ul class="nav nav-pills nav-stacked">
-					<li><a href="#"><img src="pictures/cat-logo-food.png" alt="" width="50" height="50">อาหารแมว</a></li>
-					<li><a href="#"><img src="pictures/cat-logo-toy.png" alt="" width="50" height="50">ของเล่น</a></li>
-					<li><a href="#"><img src="pictures/cat-logo-pill.png" alt="" width="50" height="50">ยารักษาโรค</a></li>
-					<li><a href="#"><img src="pictures/cat-logo-sand.png" alt="" width="50" height="50">ทรายแมว</a></li>
+					<li><a href="gallery.php"><img src="pictures/cat-logo-food.png" alt="" width="50" height="50">อาหารแมว</a></li>
+					<li><a href="gallery.php"><img src="pictures/cat-logo-toy.png" alt="" width="50" height="50">ของเล่น</a></li>
+					<li><a href="gallery.php"><img src="pictures/cat-logo-pill.png" alt="" width="50" height="50">ยารักษาโรค</a></li>
+					<li><a href="gallery.php"><img src="pictures/cat-logo-sand.png" alt="" width="50" height="50">ทรายแมว</a></li>
 				</ul>
 			</div>
 
