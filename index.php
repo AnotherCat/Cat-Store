@@ -27,21 +27,17 @@ if(isset($_SESSION["profiles"])){
 			</div>
 		</div>
 		<div class="row">
-			<!--menu-->
-			<div class="col-md-2 menu bg-warning">
-				<ul class="nav nav-pills nav-stacked">
-					<li><a href="gallery.php"><img src="pictures/cat-logo-food.png" alt="" width="50" height="50">อาหารแมว</a></li>
-					<li><a href="gallery.php"><img src="pictures/cat-logo-toy.png" alt="" width="50" height="50">ของเล่น</a></li>
-					<li><a href="gallery.php"><img src="pictures/cat-logo-pill.png" alt="" width="50" height="50">ยารักษาโรค</a></li>
-					<li><a href="gallery.php"><img src="pictures/cat-logo-sand.png" alt="" width="50" height="50">ทรายแมว</a></li>
-				</ul>
-			</div>
-
 			<!--shop-->
-			<div class="col-md-10">
-				
-				<h1 class="text-center">ยินดีต้อนรับสู่ ร้าน cat-store</h1>
+			<div class="col-md-12">
+				<h1 class="text-center">ยินดีต้อนรับสู่ ร้านCat Store</h1>
 			</div>	
+			<!--menu-->
+			<div class="col-md-12 text-center" style="padding:3px;">
+				<a href="gallery.php"><img src="pictures/cat-logo-food.png" alt="" width="50" height="50">อาหารแมว</a>
+				<a href="gallery.php"><img src="pictures/cat-logo-toy.png" alt="" width="50" height="50">ของเล่น</a>
+				<a href="gallery.php"><img src="pictures/cat-logo-pill.png" alt="" width="50" height="50">ยารักษาโรค</a>
+				<a href="gallery.php"><img src="pictures/cat-logo-sand.png" alt="" width="50" height="50">ทรายแมว</a>
+			</div>
 		</div>	
 		<!--cat food&toys show-->
 		<div class="row slice">
@@ -68,34 +64,44 @@ if(isset($_SESSION["profiles"])){
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="pictures/catfood.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>Me-O Persian Anti hairball</h3>						
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/catfood.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>Me-O Persian Anti hairball</h3>						
+									</div>
+								</a>
 							</div>
 							<div class="item">
-								<img src="pictures/catfood2.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>Me-O Seafood</h3>
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/catfood2.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>Me-O Seafood</h3>
+									</div>
+								</a>
 							</div>
 							<div class="item">
-								<img src="pictures/catfood3.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>Royal Canin Kitten Persain32</h3>
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/catfood3.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>Royal Canin Kitten Persain32</h3>
+									</div>
+								</a>
 							</div>
 							<div class="item">
-								<img src="pictures/catfood4.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>Royal Canin Babycat</h3>
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/catfood4.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>Royal Canin Babycat</h3>
+									</div>
+								</a>
 							</div>
 							<div class="item">
-								<img src="pictures/catfood5.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>Royal Canin GASTRO INTESTINAL</h3>
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/catfood5.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>Royal Canin GASTRO INTESTINAL</h3>
+									</div>
+								</a>
 							</div>
 						</div>
 
@@ -123,28 +129,36 @@ if(isset($_SESSION["profiles"])){
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="pictures/4h.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>Cat Toys for Entrancing</h3>
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/4h.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>Cat Toys for Entrancing</h3>
+									</div>
+								</a>
 							</div>
 							<div class="item">
-								<img src="pictures/2h.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>Cat Mouse Toy</h3>
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/2h.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>Cat Mouse Toy</h3>
+									</div>
+								</a>
 							</div>
 							<div class="item">
-								<img src="pictures/3h.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>Cat Toys for Artistic</h3>
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/3h.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>Cat Toys for Artistic</h3>
+									</div>
+								</a>
 							</div>
 							<div class="item">
-								<img src="pictures/1h.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>Cat Condo</h3>
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/1h.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>Cat Condo</h3>
+									</div>
+								</a>
 							</div>
 						</div>
 
@@ -187,28 +201,36 @@ if(isset($_SESSION["profiles"])){
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="pictures/c1.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>FRONTLINE Plus</h3>				
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/c1.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>FRONTLINE Plus</h3>				
+									</div>
+								</a>
 							</div>
 							<div class="item">
-								<img src="pictures/c2.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>FRONTLINE Spay</h3>		
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/c2.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>FRONTLINE Spay</h3>		
+									</div>
+								</a>
 							</div>
 							<div class="item">
-								<img src="pictures/c3.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>HOBBYY</h3>		
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/c3.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>HOBBYY</h3>		
+									</div>
+								</a>
 							</div>
 							<div class="item">
-								<img src="pictures/c4.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>Pet Grass</h3>	
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/c4.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>Pet Grass</h3>	
+									</div>
+								</a>
 							</div>
 						</div>
 
@@ -235,22 +257,28 @@ if(isset($_SESSION["profiles"])){
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="pictures/5952079.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>CATLUX</h3>
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/5952079.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>CATLUX</h3>
+									</div>
+								</a>
 							</div>
 							<div class="item">
-								<img src="pictures/cat_litter.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>Cat Litter Home Band</h3>
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/cat_litter.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>Cat Litter Home Band</h3>
+									</div>
+								</a>
 							</div>
 							<div class="item">
-								<img src="pictures/pristinep28catlitterscoop.jpg" class="center-block lo-pd">
-								<div class="carousel-caption">
-									<h3>Pristine Paws</h3>
-								</div>
+								<a href="gallery.php" title="">
+									<img src="pictures/pristinep28catlitterscoop.jpg" class="center-block lo-pd">
+									<div class="carousel-caption">
+										<h3>Pristine Paws</h3>
+									</div>
+								</a>
 							</div>
 						</div>
 
@@ -269,7 +297,7 @@ if(isset($_SESSION["profiles"])){
 		</div>
 		<!--end CatPill&Sands show-->	
 
-		
+
 	</div>	
 </div>
 </div>

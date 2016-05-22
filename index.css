@@ -4,12 +4,6 @@
 .logo{
 	padding-top: 50px;
 }
-.menu{
-	padding-top: 10px;
-	border-right: solid;
-	border-width: 3px;
-	border-color: rgb(162,51,236);
-}
 .highLight{
 	padding-top: 10px;
     background-color: rgb(255,255,255);
