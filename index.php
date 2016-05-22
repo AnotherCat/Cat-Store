@@ -45,7 +45,7 @@ if(isset($_SESSION["profiles"])){
 		</div>	
 		<!--cat food&toys show-->
 		<div class="row slice">
-			<div class="row">
+			<div class="row list">
 				<div class="col-md-2 bg">
 					<p class="text-center">CAT FOODS</p>
 				</div>	
@@ -165,7 +165,7 @@ if(isset($_SESSION["profiles"])){
 
 		<!--cat pill&sands show-->
 		<div class="row slice">
-			<div class="row">
+			<div class="row list">
 				<div class="col-md-2 bg">
 					<p class="text-center">HEALTH&CARE</p>
 				</div>	
