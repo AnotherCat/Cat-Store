@@ -11,16 +11,29 @@ if(isset($_SESSION["profiles"]) && isset($_SESSION["profiles"]["Admin"])){
 	echo "<meta http-equiv=\"refresh\" content=\"1; URL=index.php\">";
 	die();
 }
+if(isset($_GET["pCode"])){
 
-$resultProducts = queryMySQL("SELECT * FROM products");
+	$pCode = $_GET["pCode"];
 
-if($resultProducts->num_rows == 0){
+	$resultProducts = queryMySQL("SELECT * FROM products WHERE ProductCode='$pCode'");
+
+	if($resultProducts->num_rows == 0){
 		// do nothing
-}else{
-	$products = array();
-	while($row=$resultProducts->fetch_array(MYSQLI_ASSOC)){
-		array_push($products,$row);
+	}else{
+		$row=$resultProducts->fetch_array(MYSQLI_ASSOC);
 	}
+}
+
+if(isset($_POST["pCode"])){
+	$productCode = $_POST["pCode"];
+	$productName = $_POST["pName"];
+	$productDes = $_POST["pDes"];
+	$productPrice = $_POST["pPrice"];
+
+	queryMysql("UPDATE products SET ProductName='$productName',ProductDes='$productDes',ProductPrice='$productPrice' where ProductCode='$productCode'");
+	echo "Edited";
+	echo "<meta http-equiv=\"refresh\" content=\"1; URL=adminManager.php\">";
+	die();
 }
 ?>
 
@@ -35,46 +48,45 @@ if($resultProducts->num_rows == 0){
 	<link rel="stylesheet" href="index.css">
 </head>
 <body>
-	<?php require "navbar.php"; ?>
-
 	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-4">
-				<a href="addProduct.php" class="btn btn-primary">Add Product</a>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="container-fruid">
-						<!-- php here -->
-						<?php for($i=0;$i<count($products);$i++): ?>
-							<div class="row">
-							<div class="col-md-4">
-									<?php showPicture("catfood2") ?>
-								</div>
-								<div class="col-md-1">
-									Name : <?= $products[$i]["ProductName"] ?>
-								</div>
-								<div class="col-md-2">
-									Description : <?= $products[$i]["ProductDes"] ?>
-								</div>
-								<div class="col-md-1">
-									Price <?= $products[$i]["ProductPrice"] ?>
-								</div>
-								<div class="col-md-4">
-									<div class="row">
-										<a href="" class="btn btn-primary">Edit</a>
-									</div>
-									<div class="row">
-										<a href="" class="btn btn-primary">Delete</a>
-									</div>
-								</div>
-							</div>
-						<?php endfor; ?>
-						<!-- php here -->
-					</div>
+		<form action="edit.php" method="post" class="form-horizontal">
+
+			<input type="hidden" value="<?=$row['ProductCode']?>" name="pCode">
+
+			<div class="form-group">
+				<label class="col-md-4 col-md-offset-1">Name:</label>
+				<div class="col-md-5">
+					<input type="text" class="form-control input-sm" name="pName" value="<?=$row['ProductName']?>">
 				</div>
 			</div>
-		</div>
+
+			<div class="form-group">
+				<label class="col-md-4 col-md-offset-1">Description:</label>
+				<div class="col-md-5">
+					<input type="text" class="form-control input-sm" name="pDes" value="<?=$row['ProductDes']?>">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-md-4 col-md-offset-1">Price:</label>
+				<div class="col-md-5">
+					<input type="text" class="form-control input-sm" name="pPrice" value="<?=$row['ProductPrice']?>">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-md-4 col-md-offset-1">Image:</label>
+				<div class="col-md-5">
+					<input type="file" name="pImg">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-md-2 col-md-offset-8">
+					<input type="submit" class="btn btn-success" value="submit">
+				</div>
+			</div>
+		</form>
 	</div>
 
 	<script src="jquery.min.js"></script>

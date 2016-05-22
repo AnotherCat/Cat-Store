@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
+<?php require "modalForm.php"; ?>
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
@@ -17,7 +18,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<?php if(isset($admin)): ?>
-						<a href="edit.php"><span class="glyphicon glyphicon-pencil"></span></a>
+						<a href="adminManager.php"><span class="glyphicon glyphicon-pencil"></span></a>
 					<?php else: ?>
 						<a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span></a>
 					<?php endif; ?>
@@ -50,5 +51,6 @@
 			</div>
 		</div>
 	</nav>
+
 </body>
 </html>
