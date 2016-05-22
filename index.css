@@ -7,8 +7,8 @@
 .menu{
 	padding-top: 10px;
 	border-right: solid;
-	border-width: 1px;
-	border-color: rgb(160,160,160);
+	border-width: 3px;
+	border-color: rgb(162,51,236);
 }
 .highLight{
 	padding-top: 10px;
@@ -24,10 +24,15 @@
 .slice{
 	padding-bottom: 10px
 }
-p{
+.tap{
 	font-size: 16px;
 	margin: 15px;
 	font-weight: bold;
 	color: rgb(255,255,255);
 }
-
+.list{
+	border-top:solid;
+	border-width: 1px;
+	border-color: rgb(162,51,236);
+	padding-top: 10px;
+}

@@ -28,7 +28,7 @@ if(isset($_SESSION["profiles"])){
 		</div>
 		<div class="row">
 			<!--menu-->
-			<div class="col-md-2 menu">
+			<div class="col-md-2 menu bg-warning">
 				<ul class="nav nav-pills nav-stacked">
 					<li><a href="gallery.php"><img src="pictures/cat-logo-food.png" alt="" width="50" height="50">อาหารแมว</a></li>
 					<li><a href="gallery.php"><img src="pictures/cat-logo-toy.png" alt="" width="50" height="50">ของเล่น</a></li>
@@ -38,19 +38,19 @@ if(isset($_SESSION["profiles"])){
 			</div>
 
 			<!--shop-->
-			<div class="col-md-10 highLight">
+			<div class="col-md-10">
 				
 				<h1 class="text-center">ยินดีต้อนรับสู่ ร้าน cat-store</h1>
 			</div>	
 		</div>	
 		<!--cat food&toys show-->
 		<div class="row slice">
-			<div class="row">
+			<div class="row list">
 				<div class="col-md-2 bg">
-					<p class="text-center">CAT FOODS</p>
+					<p class="text-center tap">CAT FOODS</p>
 				</div>	
 				<div class="col-md-2 col-md-offset-4 bg">
-					<p class="text-center">CAT TOYS</p>
+					<p class="text-center tap">CAT TOYS</p>
 				</div>	
 			</div>
 			<div class="row">
@@ -165,12 +165,12 @@ if(isset($_SESSION["profiles"])){
 
 		<!--cat pill&sands show-->
 		<div class="row slice">
-			<div class="row">
+			<div class="row list">
 				<div class="col-md-2 bg">
-					<p class="text-center">HEALTH&CARE</p>
+					<p class="text-center tap">HEALTH&CARE</p>
 				</div>	
 				<div class="col-md-2 col-md-offset-4 bg">
-					<p class="text-center">CAT LITTER</p>
+					<p class="text-center tap">CAT LITTER</p>
 				</div>	
 			</div>
 			<div class="row">
@@ -241,7 +241,7 @@ if(isset($_SESSION["profiles"])){
 								</div>
 							</div>
 							<div class="item">
-								<img src="pictures/cat_litter_.jpg" class="center-block lo-pd">
+								<img src="pictures/cat_litter.jpg" class="center-block lo-pd">
 								<div class="carousel-caption">
 									<h3>Cat Litter Home Band</h3>
 								</div>
