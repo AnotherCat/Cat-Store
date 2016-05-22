@@ -22,7 +22,7 @@ if(isset($_SESSION["profiles"])){
 	<?php require "navbar.php"; ?>
 	<div class="container">		
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12" style="margin:0px;padding:0px;">
 				<img src="pictures/interior_cat_banner.jpg" width="100%" height="100%">			
 			</div>
 		</div>
