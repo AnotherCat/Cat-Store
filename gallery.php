@@ -1,6 +1,15 @@
 <?php
 session_start();
 require_once "functions.php";
+if(isset($_SESSION["profiles"])){
+	$lastName = $_SESSION["profiles"]["LastName"];
+	$id = $_SESSION["profiles"]["ID"];
+}else{
+	echo "You dont have any permission here. HACKER!!!??";
+	destroySession();
+	echo "<meta http-equiv=\"refresh\" content=\"1; URL=index.php\">";
+	die();
+}
 
 $resultProducts = queryMySQL("SELECT * FROM products");
 

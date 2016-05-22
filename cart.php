@@ -31,7 +31,6 @@ if(isset($_SESSION["profiles"])){
 	<title></title>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="index.css">
 </head>
 <body>
 	<?php require "navbar.php"; ?>
@@ -78,7 +77,7 @@ if(isset($_SESSION["profiles"])){
 						<!-- end php here -->
 					</div>
 				</div>
-				<div class="col-md-2 bg-primary">
+				<div class="col-md-2">
 					<div class="container-fruid">
 						<div class="row">
 							subtotal
@@ -87,7 +86,7 @@ if(isset($_SESSION["profiles"])){
 							total
 						</div>
 						<div class="row">
-							<button class="btn" type="button">PROCEED TO CHECKOUT</button>
+							<button type="button">PROCEED TO CHECKOUT</button>
 						</div>
 					</div>
 				</div>
