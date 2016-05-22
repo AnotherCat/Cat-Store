@@ -1,14 +1,14 @@
-
 .bg{
-	background-image: url("picture/1.png");
-	height: 150px;
-	background-repeat: no-repeat;
+	background-color: rgb(162,51,236);
 }
 .logo{
 	padding-top: 50px;
 }
 .menu{
 	padding-top: 10px;
+	border-right: solid;
+	border-width: 1px;
+	border-color: rgb(160,160,160);
 }
 .highLight{
 	padding-top: 10px;
@@ -16,9 +16,18 @@
 }
 .carousel-caption {
 	color: rgb(32,32,32);
-  	position: absolute;
-   	top:-40px;
+   	top:-20px;
 }
 .lo-pd{
 	padding-top: 60px;
 }
+.slice{
+	padding-bottom: 10px
+}
+p{
+	font-size: 16px;
+	margin: 15px;
+	font-weight: bold;
+	color: rgb(255,255,255);
+}
+
