@@ -45,6 +45,7 @@ if($resultProducts->num_rows == 0){
 			<div class="row">
 				<div class="col-md-12">
 					<div class="container-fruid">
+					<?php if(isset($products)): ?>
 						<!-- php here -->
 						<?php for($i=0;$i<count($products);$i++): ?>
 							<div class="row">
@@ -87,6 +88,9 @@ if($resultProducts->num_rows == 0){
 							</div>
 						<?php endfor; ?>
 						<!-- php here -->
+					<?php else: ?>
+						No Product Here.
+					<?php endif; ?>
 					</div>
 				</div>
 			</div>
