@@ -47,6 +47,6 @@
   {
     $path = "pictures/".$path;
     if (file_exists("$path.jpg"))
-      echo "<img src='$path.jpg' style='float:left;'>";
+      echo "<img src='$path.jpg'>";
   }
 ?>
