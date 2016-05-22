@@ -4,6 +4,7 @@ require_once "functions.php";
 if(isset($_SESSION["profiles"])){
 	$lastName = $_SESSION["profiles"]["LastName"];
 	$id = $_SESSION["profiles"]["ID"];
+	$admin = $_SESSION["profiles"]["Admin"];
 }
 ?>
 

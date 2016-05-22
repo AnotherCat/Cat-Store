@@ -16,7 +16,11 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+					<?php if(isset($admin)): ?>
+						<a href="edit.php"><span class="glyphicon glyphicon-pencil"></span></a>
+					<?php else: ?>
+						<a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+					<?php endif; ?>
 				</li>
 				<li>
 					<?php if(isset($lastName)): ?>
