@@ -4,7 +4,7 @@ require_once "functions.php";
 if(isset($_SESSION["profiles"])){
 	$lastName = $_SESSION["profiles"]["LastName"];
 	$memberID = $id = $_SESSION["profiles"]["ID"];
-
+	$total = 0;
 	$resultProducts = queryMySQL("SELECT * FROM products INNER JOIN cart ON cart.ProductCode = products.ProductCode WHERE cart.MemberID = '$memberID'");
 
 	if($resultProducts->num_rows == 0){
@@ -43,6 +43,7 @@ if(isset($_SESSION["profiles"])){
 					<?php if(isset($products)): ?>
 						<!-- php here -->
 						<?php for($i=0;$i<count($products);$i++): ?>
+							<?php $total += $products[$i]["ProductPrice"]; ?>
 							<div class="row">
 								<form class="form-horizontal" role="form">
 									<div class="col-md-3 form-group">
@@ -80,10 +81,7 @@ if(isset($_SESSION["profiles"])){
 				<div class="col-md-2">
 					<div class="container-fruid">
 						<div class="row">
-							subtotal
-						</div>
-						<div class="row">
-							total
+							total <?= $total ?>
 						</div>
 						<div class="row">
 							<button type="button">PROCEED TO CHECKOUT</button>
