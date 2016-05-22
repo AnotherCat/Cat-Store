@@ -39,8 +39,8 @@ if($resultProducts->num_rows == 0){
 	<?php require "modalForm.php"; ?>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-4">
-				<a href="addProduct.php" class="btn btn-primary">Add Product</a>
+			<div class="col-md-6 col-md-offset-4">	
+				<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#addProductForm"><span class="glyphicon glyphicon-shopping-cart"></span> Add Product</a>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
@@ -55,7 +55,7 @@ if($resultProducts->num_rows == 0){
 									<input type="hidden" name="pDes" value="<?= $products[$i]["ProductDes"] ?>">
 									<input type="hidden" name="pPrice" value="<?= $products[$i]["ProductPrice"] ?>">
 									<div class="col-md-3 form-group">
-										<?php showPicture("catfood2") ?>
+										<?php showPicture($products[$i]["ProductCode"]) ?>
 									</div>
 									<div class="col-md-2 form-group">
 										<label class="control-label col-md-4">Name:</label>
