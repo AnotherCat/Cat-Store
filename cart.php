@@ -81,7 +81,7 @@ if(isset($_SESSION["profiles"])){
 				<div class="col-md-2">
 					<div class="container-fruid" style="padding-left:5px;">
 						<div class="row">
-							<h1 style="color: red;">total <?= $total ?></h1>
+							<h1 style="color: red;" class="text-center">total <?= $total ?></h1>
 						</div>
 						<div class="row">
 							<button type="button" class="btn btn-default center-block">CHECKOUT</button>

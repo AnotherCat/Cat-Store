@@ -40,9 +40,12 @@ if($resultProducts->num_rows == 0){
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-4">	
-				<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#addProductForm"><span class="glyphicon glyphicon-shopping-cart"></span> Add Product</a>
+				<a href="#" class="btn btn-default" data-toggle="modal" data-target="#addProductForm"><span class="glyphicon glyphicon-shopping-cart"></span>Add Product</a>
 			</div>
 			<div class="row">
+			<div class="col-md-12">
+				<h1>Products</h1>
+			</div>
 				<div class="col-md-12">
 					<div class="container-fruid">
 					<?php if(isset($products)): ?>
@@ -76,11 +79,11 @@ if($resultProducts->num_rows == 0){
 										</div>
 									</div>
 									<div class="col-md-2">
-										<div class="row">
-											<a href="edit.php?pCode=<?= $products[$i]["ProductCode"]?>" class="btn btn-primary">Edit</a>
+										<div class="row" style="margin-bottom:10px;">
+											<a href="edit.php?pCode=<?= $products[$i]["ProductCode"]?>" class="btn btn-default">Edit</a>
 										</div>
 										<div class="row">
-											<a href="delete.php?pCode=<?= $products[$i]["ProductCode"]?>" class="btn btn-primary">Delete</a>
+											<a href="delete.php?pCode=<?= $products[$i]["ProductCode"]?>" class="btn btn-default">Delete</a>
 										</div>
 									</div>
 

@@ -4,6 +4,7 @@ require_once "functions.php";
 if(isset($_SESSION["profiles"])){
 	$lastName = $_SESSION["profiles"]["LastName"];
 	$id = $_SESSION["profiles"]["ID"];
+	$admin = $_SESSION["profiles"]["Admin"];
 }else{
 	echo "You dont have any permission here. HACKER!!!??";
 	destroySession();
@@ -39,6 +40,9 @@ if($resultProducts->num_rows == 0){
 	<div class="container">
 		<div class="row">
 			<div class="row">
+			<div class="col-md-12">
+				<h1>Products</h1>
+			</div>
 				<div class="col-md-12">
 					<div class="container-fruid">
 					<?php if(isset($products)): ?>
