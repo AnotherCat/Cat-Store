@@ -44,7 +44,7 @@ if($resultProducts->num_rows == 0){
 					<?php if(isset($products)): ?>
 						<!-- php here -->
 						<?php for($i=0;$i<count($products);$i++): ?>
-							<div class="row">
+							<div class="row" style="border:solid; border-width: 1px; margin-bottom:10px; border-color: rgb(160,160,160);">
 								<form class="form-horizontal" role="form">
 									<input type="hidden" name="pCode" value="<?= $products[$i]["ProductCode"] ?>">
 									<input type="hidden" name="pName" value="<?= $products[$i]["ProductName"] ?>">
@@ -54,26 +54,26 @@ if($resultProducts->num_rows == 0){
 										<?php showPicture($products[$i]["ProductCode"]) ?>
 									</div>
 									<div class="col-md-2 form-group">
-										<label class="control-label col-md-4">Name:</label>
+										<label class="control-label col-md-4" style="padding-top:100px">Name:</label>
 										<div class="col-md-8">
-											<p class="form-control-static"><?= $products[$i]["ProductName"] ?></p>
+											<p class="form-control-static" style="padding-top:100px"><?= $products[$i]["ProductName"] ?></p>
 										</div>
 									</div>
 									<div class="col-md-3 form-group">
-										<label class="control-label col-md-4">Description:</label>
+										<label class="control-label col-md-4" style="padding-top:100px">Description:</label>
 										<div class="col-md-8">
-											<p class="form-control-static"><?= $products[$i]["ProductDes"] ?></p>
+											<p class="form-control-static" style="padding-top:100px"><?= $products[$i]["ProductDes"] ?></p>
 										</div>
 									</div>
 									<div class="col-md-2 form-group">
-										<label class="control-label col-md-4">Price:</label>
+										<label class="control-label col-md-4" style="padding-top:100px">Price:</label>
 										<div class="col-md-8">
-											<p class="form-control-static"><?= $products[$i]["ProductPrice"] ?></p>
+											<p class="form-control-static" style="padding-top:100px"><?= $products[$i]["ProductPrice"] ?></p>
 										</div>
 									</div>
 									<div class="col-md-2 form-group">
-										<div class="row">
-											<a href="addtoCart.php?pCode=<?= $products[$i]["ProductCode"]?>" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>
+										<div class="row" style="padding-top:100px">
+											<a href="addtoCart.php?pCode=<?= $products[$i]["ProductCode"]?>" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>
 										</div>
 									</div>
 

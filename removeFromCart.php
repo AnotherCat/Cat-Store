@@ -4,7 +4,7 @@ if(isset($_GET["pCode"])){
 
 	$pCode = $_GET["pCode"];
 
-	queryMySQL("DELETE FROM cart WHERE ProductCode='$pCode'");
+	queryMySQL("DELETE FROM cart WHERE ProductCode='$pCode' LIMIT 1");
 
 
 

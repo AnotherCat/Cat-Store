@@ -38,7 +38,7 @@ if(isset($_SESSION["profiles"])){
 	<!-- start container -->
 	<div class="container">
 		<div class="row">
-			<div class="col-md-10">
+			<div class="col-md-10" style="border:solid; border-width: 1px; margin-bottom:10px; border-color: rgb(160,160,160);">
 				<div class="container">
 					<?php if(isset($products)): ?>
 						<!-- php here -->
@@ -46,30 +46,30 @@ if(isset($_SESSION["profiles"])){
 							<?php $total += $products[$i]["ProductPrice"]; ?>
 							<div class="row">
 								<form class="form-horizontal" role="form">
-									<div class="col-md-3 form-group">
+									<div class="col-md-2 form-group">
 										<?php showPicture($products[$i]["ProductCode"]) ?>
 									</div>
-									<div class="col-md-2 form-group">
+									<div class="col-md-3 form-group" style="padding:10px;">
 										<label class="control-label col-md-6">Name:</label>
 										<div class="col-md-6">
 											<p class="form-control-static"><?= $products[$i]["ProductName"] ?></p>
 										</div>
 									</div>
-									<div class="col-md-3 form-group">
+									<div class="col-md-3 form-group" style="padding:10px;">
 										<label class="control-label col-md-6">Description:</label>
 										<div class="col-md-6">
 											<p class="form-control-static"><?= $products[$i]["ProductDes"] ?></p>
 										</div>
 									</div>
-									<div class="col-md-2 form-group">
+									<div class="col-md-2 form-group" style="padding:10px;">
 										<label class="control-label col-md-6">Price:</label>
 										<div class="col-md-6">
 											<p class="form-control-static"><?= $products[$i]["ProductPrice"] ?></p>
 										</div>
 									</div>
-									<div class="col-md-2 form-group">
+									<div class="col-md-2 form-group" style="padding:10px;">
 										<div class="row">
-											<a href="removefromCart.php?pCode=<?= $products[$i]["ProductCode"]?>" class="btn"><span>X</span></a>
+											<a href="removefromCart.php?pCode=<?= $products[$i]["ProductCode"]?>" class="btn"><span style="color:red; border:solid; border-width:1px; padding:5px;">Delete</span></a>
 										</div>
 									</div>
 								</form>
@@ -79,12 +79,12 @@ if(isset($_SESSION["profiles"])){
 					</div>
 				</div>
 				<div class="col-md-2">
-					<div class="container-fruid">
+					<div class="container-fruid" style="padding-left:5px;">
 						<div class="row">
-							total <?= $total ?>
+							<h1 style="color: red;">total <?= $total ?></h1>
 						</div>
 						<div class="row">
-							<button type="button">PROCEED TO CHECKOUT</button>
+							<button type="button" class="btn btn-default center-block">CHECKOUT</button>
 						</div>
 					</div>
 				</div>

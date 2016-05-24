@@ -43,9 +43,9 @@
 			<div class="input-group col-md-6">
 				<input type="text" class="form-control input-lg" placeholder="Search" />
 				<span class="input-group-btn">
-					<button class="btn btn-info btn-lg" type="button">
+					<a class="btn btn-info btn-lg" href="gallery.php" type="button">
 						<i class="glyphicon glyphicon-search"></i>
-					</button>
+					</a>
 				</span>
 			</div>
 		</div>
