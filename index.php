@@ -33,10 +33,10 @@ if(isset($_SESSION["profiles"])){
 			</div>	
 			<!--menu-->
 			<div class="col-md-12 text-center" style="padding:3px;">
-				<a href="gallery.php"><img src="pictures/cat-logo-food.png" alt="" width="50" height="50">อาหารแมว</a>
-				<a href="gallery.php"><img src="pictures/cat-logo-toy.png" alt="" width="50" height="50">ของเล่น</a>
-				<a href="gallery.php"><img src="pictures/cat-logo-pill.png" alt="" width="50" height="50">ยารักษาโรค</a>
-				<a href="gallery.php"><img src="pictures/cat-logo-sand.png" alt="" width="50" height="50">ทรายแมว</a>
+				<a href="gallery.php?pCode=food"><img src="pictures/cat-logo-food.png" alt="" width="50" height="50">อาหารแมว</a>
+				<a href="gallery.php?pCode=toy"><img src="pictures/cat-logo-toy.png" alt="" width="50" height="50">ของเล่น</a>
+				<a href="gallery.php?pCode=hp"><img src="pictures/cat-logo-pill.png" alt="" width="50" height="50">ยารักษาโรค</a>
+				<a href="gallery.php?pCode=litter"><img src="pictures/cat-logo-sand.png" alt="" width="50" height="50">ทรายแมว</a>
 			</div>
 		</div>	
 		<!--cat food&toys show-->
@@ -181,7 +181,7 @@ if(isset($_SESSION["profiles"])){
 		<div class="row slice">
 			<div class="row list">
 				<div class="col-md-2 bg">
-					<p class="text-center tap">HEALTH&CARE</p>
+					<p class="text-center tap">HEALTH & CARE</p>
 				</div>	
 				<div class="col-md-2 col-md-offset-4 bg">
 					<p class="text-center tap">CAT LITTER</p>
@@ -296,7 +296,26 @@ if(isset($_SESSION["profiles"])){
 			</div>	
 		</div>
 		<!--end CatPill&Sands show-->	
-
+		<div class="row">
+			<div class="col-md-12" style="background-color: rgb(162,51,236);">
+				<div class="col-md-6">
+					<h1 class="text-center" style="margin: 15px; font-weight: bold; color: rgb(255,255,255);">Cat Store</h1>
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-12">
+							<h3 class="text-center" style="margin: 15px; font-weight: bold; color: rgb(255,255,255);">Contact us: 02-XXX-XXXX</h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 text-center" style="padding:3px;">
+							<a href="gallery.php"><img src="pictures/fb-logo.png" alt="" width="50" height="50"></a>
+							<a href="gallery.php"><img src="pictures/tw-logo.png" alt="" width="50" height="50"></a>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>
 
 	</div>	
 </div>

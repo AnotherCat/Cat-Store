@@ -40,7 +40,7 @@ if($resultProducts->num_rows == 0){
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-4">	
-				<a href="#" class="btn btn-default" data-toggle="modal" data-target="#addProductForm"><span class="glyphicon glyphicon-shopping-cart"></span>Add Product</a>
+				<a href="#" class="btn btn-default" data-toggle="modal" data-target="#addProductForm"><span class="glyphicon glyphicon-shopping-cart"></span> Add Product</a>
 			</div>
 			<div class="row">
 			<div class="col-md-12">
